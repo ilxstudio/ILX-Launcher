@@ -113,6 +113,8 @@ _mem_hist: deque[float] = deque(maxlen=_SPARK_LEN)
 _cpu_hot_since: float | None = None
 _wd_mem: deque[tuple[float, float]] = deque(maxlen=12)
 _wd_msg: str = ""
+_child_start_time: float | None = None   # monotonic; set when child starts
+_WD_WARMUP_S: float = 10.0              # skip growth check for this many seconds after start
 
 # --- Test traffic light -------------------------------------------------------
 _TEST_POLL    = 0.7

@@ -87,11 +87,12 @@ def start(force_plain: bool = False) -> None:
     if is_running():
         print(f"[launcher] already running (pid {s._proc.pid}) - start ignored")
         return
-    s._crash_jump   = None
-    s._cpu_hot_since = None
+    s._crash_jump      = None
+    s._cpu_hot_since   = None
     s._wd_mem.clear()
-    s._wd_msg  = ""
-    s._last_exit = None
+    s._wd_msg          = ""
+    s._last_exit       = None
+    s._child_start_time = time.monotonic()
     if not os.path.exists(s._MAIN):
         print(f"[launcher] cannot start - {s._MAIN} not found")
         return
@@ -332,7 +333,10 @@ def check_watchdog(mem_mb: float | None, cpu_pct: float | None) -> None:
             watchdog_kill(f"memory {mem_mb:.0f} MB reached the hard cap of {cap:.0f} MB")
             return
         s._wd_mem.append((mem_mb, now))
-        if len(s._wd_mem) >= 4:
+        # skip growth check during startup warmup — initial RSS jump looks like a leak
+        in_warmup = (s._child_start_time is not None and
+                     now - s._child_start_time < s._WD_WARMUP_S)
+        if not in_warmup and len(s._wd_mem) >= 4:
             (m0, t0), (m1, t1) = s._wd_mem[0], s._wd_mem[-1]
             dt   = t1 - t0
             rise = m1 - m0
