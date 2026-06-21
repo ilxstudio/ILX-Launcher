@@ -2,13 +2,15 @@
 
 **A developer cockpit for running, hot-reloading, testing, and shipping Python desktop apps.**
 
-[![CI](https://github.com/ILX-Studio/ilx-launcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ILX-Studio/ilx-launcher/actions/workflows/ci.yml)
+[![CI](https://github.com/allaint/ILX-Launcher/actions/workflows/ci.yml/badge.svg)](https://github.com/allaint/ILX-Launcher/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://python.org)
 
 Point it at any project with a `main.py`. It runs your app as a child process, watches source files, hot-patches live edits, captures crashes, manages interpreters and dependencies, builds an EXE, and gives you a local-LLM coding assistant — all from one window that stays open while you work.
 
 ![ILX Launcher main window](docs/img/main_window.png)
+
+> **One window. Start, reload, test, debug, build, ship — without ever touching a terminal.**
 
 ---
 
@@ -29,8 +31,8 @@ The ILX Launcher folds all of that into one persistent window.
 ## Quick start
 
 ```bash
-git clone https://github.com/ILX-Studio/ilx-launcher
-cd ilx-launcher
+git clone https://github.com/allaint/ILX-Launcher
+cd ILX-Launcher
 python main.py
 ```
 
@@ -63,6 +65,18 @@ No install step. No third-party dependencies. Just Python 3.11+ with tkinter.
 | **Automation** | Scaffold new projects, test matrix, quality gate, coverage, SQLite browser |
 | **Watchdog** | Auto-kills a runaway child on hard memory cap, runaway growth, or pegged CPU |
 | **Live REPL** | Run Python inside the *running* app to inspect live state |
+
+---
+
+## Screenshots
+
+| Coder (LLM workspace) | Crash history |
+|---|---|
+| ![Coder window](docs/img/coder.png) | ![Crashes window](docs/img/crashes.png) |
+
+| Logs + Procfile | Git |
+|---|---|
+| ![Logs window](docs/img/logs.png) | ![Git window](docs/img/git.png) |
 
 ---
 
