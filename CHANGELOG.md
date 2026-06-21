@@ -30,4 +30,21 @@ product repository into its own home with a fresh history.
   growth, or pegged CPU (captures a py-spy dump first).
 - Ships as a single `launcher.py`; can be frozen to a standalone `launcher.exe`.
 
+## [1.1.0] — 2026-06-21
+
+### Changed
+- Refactored `launcher.py` into a proper Python package: `core/` (process, config,
+  interpreter, build, coder, automation, ollama, repl, diagnostics, notifications) and
+  `ui/` (main window, coder window, config window, all tool windows, shared theme).
+- Entry point renamed to `main.py` (thin ~50-line dispatcher).
+- All AI-generated docstring boilerplate replaced with concise human-style chunk comments.
+- Strategic comments only — no paragraph-length docstrings, no "what" comments, only "why".
+
+### Internal
+- All 60+ shared mutable globals consolidated into `core/state.py`.
+- Import ordering carefully structured to avoid circular imports; tkinter imports are lazy
+  inside function bodies where needed.
+- Fork-bomb and frozen-build guards preserved across all new modules.
+
+[1.1.0]: https://github.com/
 [1.0.0]: https://github.com/

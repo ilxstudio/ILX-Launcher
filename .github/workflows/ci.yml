@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke-test:
+    name: Smoke test (import + syntax)
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify original launcher imports cleanly
+        run: |
+          python -c "
+          import importlib.util as u
+          s = u.spec_from_file_location('launcher', 'launcher.py')
+          m = u.module_from_spec(s)
+          s.loader.exec_module(m)
+          print('OK', m._HERE)
+          "
+
+      - name: Verify core package imports cleanly
+        run: |
+          python -c "
+          import core.state as s
+          import core.interpreter
+          import core.config
+          import core.process
+          import core.notifications
+          import core.diagnostics
+          import core.repl
+          import core.ollama
+          import core.build
+          import core.automation
+          import core.coder
+          print('All core modules OK')
+          "
+
+      - name: Verify ui package imports cleanly
+        run: |
+          python -c "
+          import core.state
+          import ui.theme
+          print('UI theme OK')
+          "
