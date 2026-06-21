@@ -5,10 +5,11 @@ Thanks for your interest. This is a small, focused tool — contributions that k
 ## Setup
 
 ```bash
-git clone <repo>
-cd ilx-launcher
-python launcher.py          # run the launcher
-python -c "import importlib.util as u; s=u.spec_from_file_location('l','launcher.py'); m=u.module_from_spec(s); s.loader.exec_module(m); print('OK')"  # smoke test
+git clone https://github.com/allaint/ILX-Launcher
+cd ILX-Launcher
+python main.py              # run the launcher
+python -c "import core.state, core.interpreter, core.config, core.process, core.build, core.automation, core.coder; print('core OK')"
+python -c "import ui.theme; print('ui OK')"
 ```
 
 No pip install needed. The launcher has zero third-party runtime dependencies.

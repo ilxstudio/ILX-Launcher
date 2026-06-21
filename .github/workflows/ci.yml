@@ -19,16 +19,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Verify original launcher imports cleanly
-        run: |
-          python -c "
-          import importlib.util as u
-          s = u.spec_from_file_location('launcher', 'launcher.py')
-          m = u.module_from_spec(s)
-          s.loader.exec_module(m)
-          print('OK', m._HERE)
-          "
-
       - name: Verify core package imports cleanly
         run: |
           python -c "
@@ -53,3 +43,6 @@ jobs:
           import ui.theme
           print('UI theme OK')
           "
+
+      - name: Verify entry point syntax
+        run: python -m py_compile main.py version.py

@@ -1,11 +1,9 @@
-"""
-ILX Launcher -- thin entry point.
-
-python launcher_new.py                 -- open the main launcher window
-python launcher_new.py --coder         -- open the Coder window for the active project
-python launcher_new.py --config        -- open Configuration
-python launcher_new.py --project <dir> -- set the active project before opening any window
-"""
+# ILX Launcher -- thin entry point.
+#
+# python main.py                  -- open the main launcher window
+# python main.py --coder          -- open the Coder window for the active project
+# python main.py --config         -- open Configuration
+# python main.py --project <dir>  -- set the active project before opening any window
 from __future__ import annotations
 
 import sys

@@ -93,7 +93,6 @@ No install step. No third-party dependencies. Just Python 3.11+ with tkinter.
 
 ```
 main.py                # entry point (~50 lines, dispatches to ui/)
-launcher.py            # original single-file launcher (still runs standalone)
 version.py             # VERSION = "1.1.0"
 core/
   state.py             # all shared globals

@@ -1,5 +1,14 @@
 # --- ILX Launcher ---
 
+# Internal AI agent guide — not for public consumption
+CLAUDE.md
+
+# Original single-file launcher — superseded by core/ + ui/ package
+launcher.py
+
+# Throwaway scripts
+_make_icon.py
+
 # Byte-compiled / optimized
 __pycache__/
 *.py[cod]

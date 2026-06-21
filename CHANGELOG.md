@@ -28,7 +28,7 @@ product repository into its own home with a fresh history.
   into the running app.
 - **Safety watchdog** — auto-kills a runaway child on a hard memory cap, runaway
   growth, or pegged CPU (captures a py-spy dump first).
-- Ships as a single `launcher.py`; can be frozen to a standalone `launcher.exe`.
+- Ships as `main.py` + `core/` + `ui/` package; can be frozen to a standalone `launcher.exe`.
 
 ## [1.1.0] — 2026-06-21
 
@@ -46,5 +46,5 @@ product repository into its own home with a fresh history.
   inside function bodies where needed.
 - Fork-bomb and frozen-build guards preserved across all new modules.
 
-[1.1.0]: https://github.com/
-[1.0.0]: https://github.com/
+[1.1.0]: https://github.com/allaint/ILX-Launcher/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/allaint/ILX-Launcher/releases/tag/v1.0.0

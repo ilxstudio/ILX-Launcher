@@ -32,8 +32,19 @@ def pick_font() -> None:
 
 # --- Theme application --------------------------------------------------------
 
+def _apply_icon(root: tk.Tk) -> None:
+    import os
+    ico = os.path.join(os.path.dirname(os.path.dirname(__file__)), "assets", "icon.ico")
+    if os.path.isfile(ico):
+        try:
+            root.iconbitmap(ico)
+        except tk.TclError:
+            pass
+
+
 def style_theme(root: tk.Tk) -> None:
     pick_font()
+    _apply_icon(root)
     root.configure(bg=s._C_BG)
     st = ttk.Style(root)
     try:
