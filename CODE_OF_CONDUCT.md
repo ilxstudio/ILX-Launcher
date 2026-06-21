@@ -19,7 +19,7 @@ Examples of unacceptable behavior:
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported to [arivera@riveraeng.com](mailto:arivera@riveraeng.com).
+Instances of unacceptable behavior may be reported to [info@ilxstudio.com](mailto:info@ilxstudio.com).
 All reports will be reviewed and responded to. Maintainers have the right to remove, edit, or
 reject any contribution that violates this code, and to ban any contributor whose behavior is
 harmful to the project.

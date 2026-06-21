@@ -11,7 +11,7 @@
 
 Please **do not** open a public GitHub issue for security vulnerabilities.
 
-Email [arivera@riveraeng.com](mailto:arivera@riveraeng.com) with:
+Email [info@ilxstudio.com](mailto:info@ilxstudio.com) with:
 - A description of the vulnerability and its potential impact
 - Steps to reproduce or a proof-of-concept
 - Any suggested mitigations you have in mind
