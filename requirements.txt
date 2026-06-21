@@ -1,0 +1,24 @@
+# ILX Launcher — runtime requirements
+#
+# The launcher itself is PURE PYTHON STDLIB + tkinter. It has NO third-party
+# runtime dependencies and runs with a stock CPython install.
+#
+# The packages below are OPTIONAL. They are not imported by the launcher; they
+# are tools the launcher drives inside your *target project's* interpreter
+# (installed there on demand from the relevant tool window). They are listed
+# here only so you can pre-install everything if you prefer.
+#
+# Install into the project interpreter you point the launcher at:
+#   python -m pip install -r requirements.txt
+
+jurigged>=0.5      # hot-patch (live function reload) — Coder/Behavior "Hot patch"
+pyinstaller>=6.0   # Build EXE / Build Installer
+ruff>=0.4          # Code Quality: lint
+black>=24.0        # Code Quality: format check
+mypy>=1.8          # Code Quality: type check
+coverage>=7.0      # Automation: coverage report
+py-spy>=0.3        # Profiler: live stack sampling + watchdog CPU dump
+
+# LLM features (Coder chat/review/edit) use a local Ollama server over HTTP
+# (urllib, stdlib) — no Python package required. Install Ollama separately:
+#   https://ollama.com

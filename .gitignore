@@ -1,0 +1,60 @@
+# --- ILX Launcher ---
+
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Local backups (e.g. the pre-tkinter launcher kept as launcher_*.py.bak)
+*.py.bak
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage / type / lint caches
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# PyInstaller / build output
+/build/
+/dist/
+*.spec
+
+# Frozen launcher build
+launcher.exe
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Launcher runtime state & transient control files
+~/.ilx_launcher.json
+.window_geometry.json
+.launcher_cmd
+.launcher_session.log
+.launcher_session.log.1
+.launcher_crashes.db
+.llm.lock
+log.txt
+
+# Runtime screenshots (NOT the curated docs/img/*.png)
+screenshot-*.png
+
+# Secrets — never commit signing material or keys
+secrets.*
+*.pem
+*.key
+*.env
