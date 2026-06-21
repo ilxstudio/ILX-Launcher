@@ -22,14 +22,7 @@ jobs:
         run: pip install pyinstaller
 
       - name: Build standalone exe
-        run: |
-          pyinstaller `
-            --onefile `
-            --windowed `
-            --name launcher `
-            --icon assets/icon.ico `
-            --add-data "assets;assets" `
-            main.py
+        run: python -m PyInstaller launcher.spec
 
       - name: Smoke-test the frozen exe (syntax only — no GUI)
         run: |

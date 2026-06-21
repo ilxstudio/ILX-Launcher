@@ -36,7 +36,8 @@ htmlcov/
 # PyInstaller / build output
 /build/
 /dist/
-*.spec
+# launcher.spec is intentionally tracked (contains hiddenimports)
+# *.spec would exclude it — don't add that pattern here
 
 # Frozen launcher build
 launcher.exe
