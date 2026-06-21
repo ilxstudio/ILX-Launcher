@@ -310,7 +310,8 @@ def run() -> int:
     style_theme(root)
 
     recents = load_recents()
-    from core.config import is_project_dir, load_interp_for
+    from core.config import is_project_dir
+    from core.interpreter import load_interp_for
     if is_project_dir(s._HERE) and os.path.abspath(s._HERE) not in (
             os.path.abspath(p) for p in recents):
         recents.insert(0, s._HERE)

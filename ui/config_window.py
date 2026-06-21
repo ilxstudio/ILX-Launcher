@@ -9,11 +9,11 @@ from tkinter import filedialog, ttk
 
 import core.state as s
 from core.config import (
-    apply_config, load_config, load_interp_for, save_config, save_interp_for,
+    apply_config, load_config, save_config,
 )
 from core.interpreter import (
     bundled_python, create_venv, download_bundled_python, interp_has_jurigged,
-    jurigged_available, project_python, venv_python,
+    jurigged_available, load_interp_for, project_python, save_interp_for, venv_python,
 )
 from core.ollama import ollama_models
 from core.process import proj_run
