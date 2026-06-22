@@ -2,7 +2,7 @@
 
 **A developer cockpit for running, hot-reloading, testing, and shipping Python desktop apps.**
 
-[![CI](https://github.com/allaint/ILX-Launcher/actions/workflows/ci.yml/badge.svg)](https://github.com/allaint/ILX-Launcher/actions/workflows/ci.yml)
+[![CI](https://github.com/ilxstudio/ILX-Launcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ilxstudio/ILX-Launcher/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://python.org)
 
@@ -31,7 +31,7 @@ The ILX Launcher folds all of that into one persistent window.
 ## Quick start
 
 ```bash
-git clone https://github.com/allaint/ILX-Launcher
+git clone https://github.com/ilxstudio/ILX-Launcher
 cd ILX-Launcher
 python main.py
 ```

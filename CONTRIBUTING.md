@@ -5,7 +5,7 @@ Thanks for your interest. This is a small, focused tool — contributions that k
 ## Setup
 
 ```bash
-git clone https://github.com/allaint/ILX-Launcher
+git clone https://github.com/ilxstudio/ILX-Launcher
 cd ILX-Launcher
 python main.py              # run the launcher
 python -c "import core.state, core.interpreter, core.config, core.process, core.build, core.automation, core.coder; print('core OK')"

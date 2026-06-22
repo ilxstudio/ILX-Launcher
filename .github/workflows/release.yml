@@ -45,7 +45,7 @@ jobs:
           body: |
             ## ILX Launcher v${{ steps.version.outputs.VERSION }}
 
-            See [CHANGELOG.md](https://github.com/allaint/ILX-Launcher/blob/main/CHANGELOG.md) for what's new.
+            See [CHANGELOG.md](https://github.com/ilxstudio/ILX-Launcher/blob/main/CHANGELOG.md) for what's new.
 
             ### Installation
 
@@ -54,7 +54,7 @@ jobs:
 
             **Option 2 — Run from source**
             ```bash
-            git clone https://github.com/allaint/ILX-Launcher
+            git clone https://github.com/ilxstudio/ILX-Launcher
             cd ILX-Launcher
             python main.py
             ```

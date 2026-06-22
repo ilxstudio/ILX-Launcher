@@ -46,5 +46,5 @@ product repository into its own home with a fresh history.
   inside function bodies where needed.
 - Fork-bomb and frozen-build guards preserved across all new modules.
 
-[1.1.0]: https://github.com/allaint/ILX-Launcher/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/allaint/ILX-Launcher/releases/tag/v1.0.0
+[1.1.0]: https://github.com/ilxstudio/ILX-Launcher/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/ilxstudio/ILX-Launcher/releases/tag/v1.0.0
